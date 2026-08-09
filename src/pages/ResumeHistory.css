@@ -1,0 +1,53 @@
+.resume-history {
+
+    padding: 30px;
+
+}
+
+.resume-history h1 {
+
+    margin-bottom: 25px;
+
+}
+
+.resume-history table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+.resume-history th {
+
+    background-color: #2563eb;
+
+    color: white;
+
+    padding: 12px;
+
+}
+
+.resume-history td {
+
+    padding: 12px;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+.resume-history tr:hover {
+
+    background-color: #f5f5f5;
+
+}
+
+.empty-message {
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    color: gray;
+
+}

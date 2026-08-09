@@ -1,0 +1,32 @@
+.interview-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+.result-card {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.review-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.interview-btn {
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.interview-btn:hover {
+  opacity: 0.9;
+}
