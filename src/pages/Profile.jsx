@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import './Profile.css';
 
 function Profile() {
 
@@ -43,55 +44,25 @@ function Profile() {
   }, []);
 
     return (
-
-        <div className="profile-page">
-
-            <h1>Profile Dashboard</h1>
-
-            <div className="profile-card">
-
-                <h2>Basic Information</h2>
-
-                <p><strong>Name:</strong> -</p>
-
-                <p><strong>Email:</strong> -</p>
-
-                <p><strong>Interested Role:</strong> -</p>
-
-            </div>
-
-            <div className="stats-card">
-
-                <h2>Resume Statistics</h2>
-
-                <p>
-
-                    <strong>Total Resume Analyses:</strong>
-                
-                    {profileData.totalResumes}
-                
-                </p>
-                
-                <p>
-                
-                    <strong>Highest ATS Score:</strong>
-                
-                    {profileData.highestScore}
-                
-                </p>
-                
-                <p>
-                
-                    <strong>Average ATS Score:</strong>
-                
-                    {profileData.averageScore.toFixed(2)}
-                
-                </p>
-
-            </div>
-
+      <div className="profile-page">
+        <h1>Profile Dashboard</h1>
+    
+        <div className="profile-grid">
+          <div className="profile-card">
+            <h2>Basic Information</h2>
+            <p><strong>Name:</strong> -</p>
+            <p><strong>Email:</strong> -</p>
+            <p><strong>Interested Role:</strong> -</p>
+          </div>
+    
+          <div className="stats-card">
+            <h2>Resume Statistics</h2>
+            <p><strong>Total Resume Analyses:</strong> {profileData.totalResumes}</p>
+            <p><strong>Highest ATS Score:</strong> {profileData.highestScore}</p>
+            <p><strong>Average ATS Score:</strong> {profileData.averageScore.toFixed(2)}</p>
+          </div>
         </div>
-
+      </div>
     );
 
 }

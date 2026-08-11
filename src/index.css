@@ -53,8 +53,9 @@
 body {
   margin: 0;
   font-family: Inter, system-ui, sans-serif;
-  background: #576c82;
   color: #111827;
+  background: #f3f6fb;
+  min-height: 100vh;
 }
 
 #root {
@@ -103,4 +104,14 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* Default text on dark background */
+p {
+  color: #cbd5e1;
+}
+
+/* Headings stay bright */
+h1, h2, h3 {
+  color: #f8fafc;
 }

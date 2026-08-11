@@ -221,6 +221,11 @@ function Resume() {
 
     <div className="resume-container">
 
+      <div className="page-header">
+        <h1>Resume Builder</h1>
+        <p>Create an ATS-friendly resume and improve your profile with AI-powered suggestions.</p>
+      </div>
+
       <div className="resume-form">
 
         <Accordion title="Personal Information">

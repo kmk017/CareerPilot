@@ -20,6 +20,9 @@ function Interview() {
 
   const [score, setScore] = useState(0);
 
+  const [aiFeedback, setAiFeedback] = useState('');
+  const [feedbackLoading, setFeedbackLoading] = useState(false);
+
   function handleCareerChange(event) {
     setSelectedCareer(event.target.value);
   }
@@ -81,9 +84,37 @@ function Interview() {
     });
   
     setScore(correct);
-  
     setQuizFinished(true);
+    getAIFeedback(correct);
+  }
+
+  async function getAIFeedback(finalScore) {
+    try {
+      setFeedbackLoading(true);
   
+      const response = await fetch(
+        'http://127.0.0.1:5000/api/interview-feedback',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            career: selectedCareer,
+            score: finalScore,
+            total: questions.length
+          })
+        }
+      );
+  
+      const data = await response.json();
+      setAiFeedback(data.feedback);
+  
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setFeedbackLoading(false);
+    }
   }
   
   function handleTimeUp() {
@@ -291,6 +322,32 @@ function Interview() {
 
             <hr style={{ margin: "30px 0" }} />
 
+            {(feedbackLoading || aiFeedback) && (
+              <div className="ai-feedback">
+                <h3>🤖 AI Interview Feedback</h3>
+            
+                {feedbackLoading ? (
+                  <p>Generating personalized feedback...</p>
+                ) : (
+                  <div className="ai-feedback-text">
+                    {aiFeedback.split('\n').map((line, index) => {
+                      const trimmed = line.trim();
+                  
+                      const isHeading =
+                        trimmed.endsWith(':') &&
+                        !trimmed.startsWith('-');
+                  
+                      return isHeading ? (
+                        <h4 key={index}>{trimmed}</h4>
+                      ) : (
+                        <p key={index}>{trimmed}</p>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            )}
+
             <h2>Review Answers</h2>
             
             {
@@ -417,37 +474,20 @@ function Interview() {
                 total={questions.length}
             />
        
-             <h2>
-       
-               Question
-       
-               {" "}
-       
-               {currentQuestion + 1}
-       
-               {" / "}
-       
-               {questions.length}
-       
-             </h2>
-       
-             <h3>
-       
-               {question.question}
-       
-             </h3>
+            <div className="question-card">
+              <div className="question-number">
+                Question {currentQuestion + 1} of {questions.length}
+              </div>
+            
+              <h3 className="question-text">
+                {question.question}
+              </h3>
        
              {
        
                  question.options.map((option) => (
          
-                   <div
-         
-                     key={option}
-         
-                     style={{ marginBottom: "10px" }}
-         
-                   >
+                   <div key={option} className="option-item">
          
                      <label>
          
@@ -537,6 +577,7 @@ function Interview() {
          
                </div>
          
+             </div>
              </div>
          
            )

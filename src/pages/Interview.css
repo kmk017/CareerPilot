@@ -1,32 +1,260 @@
-.interview-container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
+/* ================= PAGE ================= */
+
+.interview-page {
+max-width: 1000px;
+margin: 40px auto;
+padding: 0 20px 40px;
+}
+
+.interview-page h1 {
+font-size: 2.5rem;
+color: #0f172a;
+margin-bottom: 10px;
+}
+
+.interview-page > p {
+color: #475569;
+margin-bottom: 28px;
+max-width: 720px;
+}
+
+/* ================= CARDS ================= */
+
+.result-card,
+.review-card,
+.question-card {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 24px;
+padding: 24px;
+box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
 }
 
 .result-card {
-  margin-top: 30px;
-  padding: 25px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  background: #fafafa;
+margin-bottom: 24px;
 }
 
 .review-card {
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+margin-top: 18px;
 }
 
-.interview-btn {
+/* ================= SELECT ================= */
+
+.result-card select {
+padding: 12px 16px;
+border-radius: 12px;
+border: 1px solid #cbd5e1;
+margin-left: 10px;
+font-size: 15px;
+}
+
+/* ================= BUTTONS ================= */
+
+.interview-page button {
+background: #2563eb;
+color: white;
+border: none;
+padding: 12px 20px;
+border-radius: 12px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.2s ease;
+margin-right: 10px;
+}
+
+.interview-page button:hover {
+background: #1d4ed8;
+transform: translateY(-1px);
+}
+
+.interview-page button:disabled {
+opacity: 0.5;
+cursor: not-allowed;
+transform: none;
+}
+
+/* ================= QUESTION AREA ================= */
+
+.question-card {
+margin-top: 24px;
+}
+
+.question-number {
+display: inline-block;
+background: #dbeafe;
+color: #1d4ed8;
+padding: 6px 12px;
+border-radius: 999px;
+font-weight: 700;
+margin-bottom: 14px;
+}
+
+.question-text {
+color: #0f172a;
+font-size: 1.2rem;
+margin-bottom: 20px;
+}
+
+/* ================= OPTIONS ================= */
+
+.option-item {
+margin-bottom: 12px;
+padding: 12px 14px;
+border: 1px solid #e2e8f0;
+border-radius: 14px;
+transition: all 0.2s ease;
+}
+
+.option-item:hover {
+border-color: #93c5fd;
+background: #eff6ff;
+}
+
+.option-item label {
+display: flex;
+align-items: center;
+gap: 10px;
+cursor: pointer;
+color: #334155;
+}
+
+/* ================= SCORE ================= */
+
+.score-badge {
+display: inline-block;
+background: #dcfce7;
+color: #166534;
+padding: 8px 14px;
+border-radius: 999px;
+font-weight: 700;
+margin: 10px 0 18px;
+}
+
+/* ================= AI FEEDBACK ================= */
+
+.ai-feedback {
+margin-top: 24px;
+background: #f8fafc;
+border: 1px solid #e2e8f0;
+border-radius: 18px;
+padding: 20px;
+}
+
+.ai-feedback h3 {
+margin-top: 0;
+color: #2563eb;
+}
+
+.ai-feedback p {
+color: #475569;
+line-height: 1.7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+.interview-page {
+padding: 0 16px 32px;
+}
+
+.result-card,
+.review-card,
+.question-card {
+padding: 18px;
+}
+
+.interview-page button {
+width: 100%;
+margin-bottom: 10px;
+}
+}
+
+.ai-feedback-text p {
+  margin: 8px 0;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.ai-feedback-text p:first-child,
+.ai-feedback-text p:nth-child(4),
+.ai-feedback-text p:nth-child(7),
+.ai-feedback-text p:nth-child(11),
+.ai-feedback-text p:nth-child(15) {
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 14px;
+}
+
+.ai-feedback {
   margin-top: 20px;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  padding: 22px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
 }
 
-.interview-btn:hover {
-  opacity: 0.9;
+.ai-feedback h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.ai-feedback-text h4 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #1e3a8a;
+  font-size: 1rem;
+}
+
+.ai-feedback-text p {
+  margin: 6px 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.interview-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px 40px;
+}
+
+.result-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.review-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 18px;
+}
+
+.question-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  margin-top: 24px;
+}
+
+.interview-page button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.interview-page button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
 }

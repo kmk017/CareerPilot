@@ -117,12 +117,8 @@ function Questionnaire({ answers, setAnswers, onSubmit }) {
             ))
           }
 
-          <button
-            onClick={onSubmit}
-          >
-
-            Find My Career
-
+          <button className="submit-btn" onClick={onSubmit}>
+            Get Recommendation
           </button>
 
         </div>

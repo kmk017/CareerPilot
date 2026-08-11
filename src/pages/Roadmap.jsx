@@ -26,7 +26,7 @@ function Roadmap() {
 
     } else {
 
-      setSelectedCareer(careers[0]);
+      setSelectedCareer(careers[0]); // keep for default
 
     }
 

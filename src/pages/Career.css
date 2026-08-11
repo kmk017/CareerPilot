@@ -1,64 +1,94 @@
 .career-page {
-
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding: 40px;
-
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px 40px;
 }
 
-.questionnaire-section {
+.career-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
 
-    margin-top: 30px;
+.career-page > p {
+  color: #475569;
+  margin-bottom: 28px;
+  max-width: 760px;
+}
 
+.questionnaire-section,
+.recommendation-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
 }
 
 .recommendation-section {
-
-    margin-top: 40px;
-
+  margin-top: 28px;
 }
-button {
 
-    margin: 5px;
+.skill-card,
+.recommendation-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
 
-    padding: 8px 16px;
+/* Default option buttons (unselected) */
+.questionnaire-section button {
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 6px;
+}
 
-    cursor: pointer;
+/* Hover effect */
+.questionnaire-section button:hover {
+  background: #4c535d;
+  border-color: #93c5fd;
+  transform: translateY(-1px);
+}
 
+/* Selected option */
+.questionnaire-section .selected {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+/* Main action buttons (Get Recommendation, View Roadmap, etc.) */
+.recommendation-section button,
+.questionnaire-section .submit-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.recommendation-section button:hover,
+.questionnaire-section .submit-btn:hover {
+  background: #1d4ed8;
 }
 
 .selected {
-
-    background-color: #2563eb;
-
-    color: white;
-
-    border: none;
-
+  background: #2563eb;
+  color: white;
 }
 
-.skill-card {
-
-    margin-bottom: 20px;
-
-    padding: 15px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 8px;
-
-}
-
-.recommendation-card {
-
-    margin-top: 20px;
-
+@media (max-width: 768px) {
+  .questionnaire-section,
+  .recommendation-section {
     padding: 20px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 10px;
-
+  }
 }
