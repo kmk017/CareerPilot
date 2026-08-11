@@ -20,14 +20,14 @@ function Hero() {
 
         <div className="hero-actions">
           <button
-            className="primary-btn"
+            className="btn-primary"
             onClick={() => navigate("/resume")}
           >
             🚀 Build My Resume
           </button>
 
           <button
-            className="secondary-btn"
+            className="btn-secondary"
             onClick={() => document.getElementById("features").scrollIntoView({ behavior: "smooth" })}
           >
             Explore Features

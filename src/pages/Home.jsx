@@ -20,7 +20,7 @@ function Home() {
         <p>
           Create ATS-friendly resumes and improve your summary with AI.
         </p>
-        <button onClick={() => navigate("/resume")}>
+        <button className="btn-primary" onClick={() => navigate("/resume")}>
           Build Resume
         </button>
       </div>
@@ -30,7 +30,7 @@ function Home() {
         <p>
           Explore frontend, backend, and AI/ML career paths.
         </p>
-        <button onClick={() => navigate("/career")}>
+        <button className="btn-primary" onClick={() => navigate("/career")}>
           Explore Careers
         </button>
       </div>
@@ -40,7 +40,7 @@ function Home() {
         <p>
           Follow a structured roadmap to become job-ready.
         </p>
-        <button onClick={() => navigate("/roadmap")}>
+        <button className="btn-primary" onClick={() => navigate("/roadmap")}>
           View Roadmap
         </button>
       </div>
@@ -50,7 +50,7 @@ function Home() {
         <p>
           Practice technical interview questions and improve interview confidence.
         </p>
-        <button onClick={() => navigate("/interview")}>
+        <button className="btn-primary" onClick={() => navigate("/interview")}>
           Start Practice
         </button>
       </div>

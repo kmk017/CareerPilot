@@ -117,14 +117,12 @@
     border-top:1px solid #ddd;
 }
 
-.resume-preview p{
-
-    margin:6px 0;
-
-    line-height:1.6;
-
-    font-size:15px;
-
+.resume-preview {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
 }
 
 .project-preview h3,
@@ -299,18 +297,17 @@
 
 }
 
-.action-bar{
-
-    width:100%;
-
-    display:flex;
-
-    justify-content:flex-end;
-
-    margin-bottom:20px;
-
-    gap:15px;
-
+.action-bar {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 16px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
 }
 
 .action-bar button{
@@ -365,4 +362,111 @@
 
     margin:8px 0;
 
+}
+
+.resume-container {
+  max-width: 1500px;
+  margin: 32px auto;
+  padding: 0 20px 40px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.resume-form {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  position: sticky;
+  top: 24px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+  .resume-container {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-form {
+    position: static;
+    max-height: none;
+  }
+
+  .action-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.ats-result {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.ats-result h2 {
+  margin: 0 0 10px;
+  color: #111827;
+}
+
+.ats-result h3 {
+  margin-top: 22px;
+  margin-bottom: 10px;
+  color: #2563eb;
+  font-size: 1rem;
+}
+
+.ats-result p {
+  margin: 8px 0;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.ats-score-badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.resume-history {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.resume-history h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #111827;
+}
+
+.history-item {
+  padding: 14px 0;
+}
+
+.history-item + .history-item {
+  border-top: 1px solid #f1f5f9;
+}
+
+.history-name {
+  font-weight: 700;
+  color: #111827;
+}
+
+.history-meta {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-top: 4px;
 }

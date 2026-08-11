@@ -4,14 +4,14 @@ import Accordion from "../components/Accordion";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
+
 import PersonalInfo from "../components/resume/PersonalInfo";
 import ResumePreview from "../components/resume/ResumePreview";
 import Education from "../components/resume/Education";
 import Skills from "../components/resume/Skills";
 import Projects from "../components/resume/Projects";
 import Experience from "../components/resume/Experience";
-
-const API_BASE = "http://127.0.0.1:5000";
+import { API_BASE } from "../config";
 
 function Resume() {
 
@@ -349,7 +349,9 @@ function Resume() {
 
               <h2>{resumeLevel}</h2>
 
-              <h2>ATS Score : {atsScore}%</h2>
+              <div className="ats-score-badge">
+                ATS Score: {atsScore}%
+              </div>
 
               <h3>📝 Resume Content</h3>
 
@@ -387,24 +389,15 @@ function Resume() {
             {resumeHistory.length === 0 ? (
               <p>No resumes analyzed yet.</p>
             ) : (
-          
-            resumeHistory.map((resume) => (
-          
-              <div key={resume.id}>
-          
-                <p>
-                  <strong>{resume.name}</strong>
-                </p>
-
-                <p>Score: {resume.score}%</p>
-          
-                <p>{resume.level}</p>
-          
-                <hr />
-          
-              </div>
-          
-            )))}
+              resumeHistory.map((resume) => (
+                <div key={resume.id} className="history-item">
+                  <div className="history-name">{resume.name}</div>
+                  <div className="history-meta">
+                    Score: {resume.score}% • {resume.level}
+                  </div>
+                </div>
+              ))
+            )}
           
           </div>
           )}
