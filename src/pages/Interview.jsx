@@ -475,10 +475,6 @@ function Interview() {
             />
        
             <div className="question-card">
-              <div className="question-number">
-                Question {currentQuestion + 1} of {questions.length}
-              </div>
-            
               <h3 className="question-text">
                 {question.question}
               </h3>

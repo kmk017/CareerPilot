@@ -1,260 +1,241 @@
-/* ================= PAGE ================= */
-
 .interview-page {
-max-width: 1000px;
-margin: 40px auto;
-padding: 0 20px 40px;
+  width: min(980px, calc(100% - 40px));
+  margin: 36px auto 56px;
 }
 
-.interview-page h1 {
-font-size: 2.5rem;
-color: #0f172a;
-margin-bottom: 10px;
+.interview-page > h1 {
+  margin-bottom: 8px;
+  color: #f8fafc;
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
 }
 
 .interview-page > p {
-color: #475569;
-margin-bottom: 28px;
-max-width: 720px;
-}
-
-/* ================= CARDS ================= */
-
-.result-card,
-.review-card,
-.question-card {
-background: #ffffff;
-border: 1px solid #e2e8f0;
-border-radius: 24px;
-padding: 24px;
-box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
-}
-
-.result-card {
-margin-bottom: 24px;
-}
-
-.review-card {
-margin-top: 18px;
-}
-
-/* ================= SELECT ================= */
-
-.result-card select {
-padding: 12px 16px;
-border-radius: 12px;
-border: 1px solid #cbd5e1;
-margin-left: 10px;
-font-size: 15px;
-}
-
-/* ================= BUTTONS ================= */
-
-.interview-page button {
-background: #2563eb;
-color: white;
-border: none;
-padding: 12px 20px;
-border-radius: 12px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.2s ease;
-margin-right: 10px;
-}
-
-.interview-page button:hover {
-background: #1d4ed8;
-transform: translateY(-1px);
-}
-
-.interview-page button:disabled {
-opacity: 0.5;
-cursor: not-allowed;
-transform: none;
-}
-
-/* ================= QUESTION AREA ================= */
-
-.question-card {
-margin-top: 24px;
-}
-
-.question-number {
-display: inline-block;
-background: #dbeafe;
-color: #1d4ed8;
-padding: 6px 12px;
-border-radius: 999px;
-font-weight: 700;
-margin-bottom: 14px;
-}
-
-.question-text {
-color: #0f172a;
-font-size: 1.2rem;
-margin-bottom: 20px;
-}
-
-/* ================= OPTIONS ================= */
-
-.option-item {
-margin-bottom: 12px;
-padding: 12px 14px;
-border: 1px solid #e2e8f0;
-border-radius: 14px;
-transition: all 0.2s ease;
-}
-
-.option-item:hover {
-border-color: #93c5fd;
-background: #eff6ff;
-}
-
-.option-item label {
-display: flex;
-align-items: center;
-gap: 10px;
-cursor: pointer;
-color: #334155;
-}
-
-/* ================= SCORE ================= */
-
-.score-badge {
-display: inline-block;
-background: #dcfce7;
-color: #166534;
-padding: 8px 14px;
-border-radius: 999px;
-font-weight: 700;
-margin: 10px 0 18px;
-}
-
-/* ================= AI FEEDBACK ================= */
-
-.ai-feedback {
-margin-top: 24px;
-background: #f8fafc;
-border: 1px solid #e2e8f0;
-border-radius: 18px;
-padding: 20px;
-}
-
-.ai-feedback h3 {
-margin-top: 0;
-color: #2563eb;
-}
-
-.ai-feedback p {
-color: #475569;
-line-height: 1.7;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 768px) {
-.interview-page {
-padding: 0 16px 32px;
-}
-
-.result-card,
-.review-card,
-.question-card {
-padding: 18px;
-}
-
-.interview-page button {
-width: 100%;
-margin-bottom: 10px;
-}
-}
-
-.ai-feedback-text p {
-  margin: 8px 0;
-  color: #334155;
+  max-width: 720px;
+  margin-bottom: 24px;
+  color: #cbd5e1;
   line-height: 1.7;
 }
 
-.ai-feedback-text p:first-child,
-.ai-feedback-text p:nth-child(4),
-.ai-feedback-text p:nth-child(7),
-.ai-feedback-text p:nth-child(11),
-.ai-feedback-text p:nth-child(15) {
-  font-weight: 700;
+.result-card,
+.question-card,
+.review-card,
+.ai-feedback {
+  padding: 24px;
+  background: #e8eef7;
+  border: 1px solid #c7d3e2;
+  border-radius: 20px;
+  box-shadow: 0 14px 32px rgba(2, 6, 23, 0.14);
+}
+
+.result-card,
+.question-card {
+  margin-bottom: 20px;
+}
+
+.result-card h2,
+.result-card h3,
+.question-card h2,
+.question-card h3,
+.review-card h2,
+.review-card h3,
+.ai-feedback h3 {
   color: #0f172a;
-  margin-top: 14px;
+}
+
+.result-card p,
+.result-card label,
+.question-card p,
+.question-card label,
+.review-card p,
+.ai-feedback p,
+.ai-feedback-text p,
+.ai-feedback-text h4 {
+  color: #475569;
+}
+
+.result-card select {
+  min-height: 44px;
+  margin-left: 10px;
+  padding: 10px 14px;
+  color: #0f172a;
+  background: #f8fafc;
+  border: 1px solid #c7d3e2;
+  border-radius: 11px;
+}
+
+.interview-page button {
+  min-height: 44px;
+  margin-right: 8px;
+  padding: 10px 18px;
+  color: #fff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 11px;
+  font-weight: 700;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.interview-page button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.interview-page button:disabled {
+  opacity: 0.5;
+  transform: none;
+}
+
+.question-card {
+  background: #f4f7fb;
+}
+
+.question-number {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 10px;
+  margin-bottom: 14px;
+  color: #1d4ed8;
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.question-text {
+  margin-bottom: 20px;
+  color: #0f172a;
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+
+.option-item {
+  margin-bottom: 10px;
+  padding: 13px 15px;
+  background: #e9eff6;
+  border: 1px solid #cbd5e1;
+  border-radius: 13px;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.option-item:hover {
+  background: #e0ebfb;
+  border-color: #93c5fd;
+  transform: translateY(-1px);
+}
+
+.option-item label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #334155;
+  cursor: pointer;
+}
+
+.timer-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 12px;
+  padding: 14px 16px;
+  background: #dce7f3;
+  border: 1px solid #c0cede;
+  border-radius: 14px;
+}
+
+.timer-text,
+.timer-value,
+.progress-text {
+  margin: 0;
+  color: #0f172a;
+  font-weight: 750;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: inherit;
+  transition: width 0.25s ease;
+}
+
+.score-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  margin: 8px 0 16px;
+  padding: 5px 12px;
+  color: #166534;
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+  border-radius: 999px;
+  font-weight: 750;
 }
 
 .ai-feedback {
   margin-top: 20px;
-  padding: 22px;
-  border-radius: 16px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: #eef2ff;
+  border-color: #c7d2fe;
 }
 
 .ai-feedback h3 {
-  margin-top: 0;
-  margin-bottom: 16px;
-  color: #0f172a;
-}
-
-.ai-feedback-text h4 {
-  margin-top: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   color: #1e3a8a;
-  font-size: 1rem;
 }
 
 .ai-feedback-text p {
-  margin: 6px 0;
-  color: #334155;
-  line-height: 1.6;
+  margin: 8px 0;
+  line-height: 1.7;
 }
 
-.interview-page {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px 40px;
-}
-
-.result-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+.ai-feedback-text h4 {
+  margin: 16px 0 7px;
+  color: #1e3a8a;
 }
 
 .review-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  padding: 20px;
-  margin-top: 18px;
+  margin-top: 14px;
+  background: #f1f5f9;
 }
 
-.question-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  margin-top: 24px;
+.review-card strong {
+  color: #0f172a;
 }
 
-.interview-page button {
-  background: #2563eb;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
+@media (max-width: 768px) {
+  .interview-page {
+    width: min(100% - 24px, 680px);
+  }
 
-.interview-page button:hover {
-  background: #1d4ed8;
-  transform: translateY(-1px);
+  .result-card,
+  .question-card,
+  .review-card,
+  .ai-feedback {
+    padding: 18px;
+  }
+
+  .result-card select {
+    width: 100%;
+    margin: 10px 0 0;
+  }
+
+  .interview-page button {
+    width: 100%;
+    margin: 5px 0 0;
+  }
+
+  .timer-block {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

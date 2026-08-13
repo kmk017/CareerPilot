@@ -7,7 +7,7 @@ function Recommendation({ recommendations, onViewRoadmap }) {
             <p>
 
                 Complete the questionnaire and click
-                <strong> Find My Career </strong>
+                <strong> Get Recommendation </strong>
                 to see your recommendations.
 
             </p>

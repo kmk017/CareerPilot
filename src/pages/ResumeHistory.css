@@ -1,53 +1,68 @@
-.resume-history {
-
-    padding: 30px;
-
+.resume-history-page {
+  width: min(1180px, calc(100% - 40px));
+  margin: 36px auto 56px;
 }
 
-.resume-history h1 {
-
-    margin-bottom: 25px;
-
+.resume-history-page h1 {
+  margin-bottom: 20px;
+  color: #f8fafc;
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
 }
 
-.resume-history table {
-
-    width: 100%;
-
-    border-collapse: collapse;
-
+.history-card {
+  overflow-x: auto;
+  padding: 6px;
+  background: #e8eef7;
+  border: 1px solid #c7d3e2;
+  border-radius: 20px;
+  box-shadow: 0 14px 32px rgba(2, 6, 23, 0.14);
 }
 
-.resume-history th {
-
-    background-color: #2563eb;
-
-    color: white;
-
-    padding: 12px;
-
+.history-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
 }
 
-.resume-history td {
-
-    padding: 12px;
-
-    border-bottom: 1px solid #ddd;
-
+.history-table th {
+  padding: 14px 16px;
+  text-align: left;
+  color: #0f172a;
+  background: #d8e3ef;
+  border-bottom: 1px solid #c1cfdd;
+  font-size: 0.9rem;
 }
 
-.resume-history tr:hover {
+.history-table td {
+  padding: 14px 16px;
+  color: #475569;
+  background: #f4f7fb;
+  border-bottom: 1px solid #dbe3ec;
+}
 
-    background-color: #f5f5f5;
+.history-table tbody tr:hover td {
+  background: #eaf1f8;
+}
 
+.history-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.history-table td:nth-child(3) {
+  color: #1d4ed8;
+  font-weight: 750;
 }
 
 .empty-message {
+  padding: 24px;
+  color: #64748b;
+  text-align: center;
+}
 
-    text-align: center;
-
-    margin-top: 40px;
-
-    color: gray;
-
+@media (max-width: 768px) {
+  .resume-history-page {
+    width: min(100% - 24px, 700px);
+  }
 }

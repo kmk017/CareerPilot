@@ -7,18 +7,17 @@ import Roadmap from "./pages/Roadmap";
 import Profile from "./pages/Profile";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import StudentCard from "./components/StudentCard";
 import Interview from "./pages/Interview";
-import { useState } from "react";
 import ResumeHistory from "./pages/ResumeHistory";
 
 function App() {
   return (
-    <div>
+    <div className="app-shell">
       <Navbar
         title="CareerPilot"
         subtitle="student career companion"
       />
+      <main className="app-main">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />
@@ -28,6 +27,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/resume-history" element={<ResumeHistory />} />  
       </Routes>
+      </main>
 
       <Footer />
     </div>

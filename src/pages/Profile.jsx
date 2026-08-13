@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import './Profile.css';
+import { API_BASE } from "../config";
 
 function Profile() {
 
@@ -19,7 +20,7 @@ function Profile() {
   
           const response = await fetch(
   
-              "http://127.0.0.1:5000/api/profile"
+              `${API_BASE}/api/profile`
   
           );
   

@@ -53,85 +53,60 @@ function Roadmap() {
   console.log(selectedCareer);
 
   return (
-
     <div className="roadmap-page">
-
-      <h1>Career Roadmap</h1>
-
-      <div style={{ marginBottom: "20px" }}>
-
-        <label>
-
-          <strong>Select Career : </strong>
-
-        </label>
-
-        <select
-
-          value={selectedCareer.title}
-
-          onChange={handleCareerChange}
-
-        >
-
-          {
-
-            careers.map((career) => (
-
-              <option
-
-                key={career.title}
-
-                value={career.title}
-
-              >
-
-                {career.title}
-
-              </option>
-
-            ))
-
-          }
-
-        </select>
-
+  
+      <div className="roadmap-hero">
+        <h1>Career Roadmap</h1>
+        <p>
+          Follow a structured learning path, build projects, prepare for interviews,
+          and become job-ready step by step.
+        </p>
       </div>
+  
+      <div className="roadmap-selector">
+        <label>Select Career</label>
+  
+        <select
+          value={selectedCareer.title}
+          onChange={handleCareerChange}
+        >
+          {careers.map((career) => (
+            <option key={career.title} value={career.title}>
+              {career.title}
+            </option>
+          ))}
+        </select>
+      </div>
+  
+      <div className="roadmap-grid">
 
-      <OverviewCard career={selectedCareer} />
-
-      <PrerequisiteSection
-        prerequisites={selectedCareer.roadmap?.prerequisites || []}
-      />
-
-      <SkillSection
-
-        skills={selectedCareer.roadmap?.skills || []}
-
-      />
-
-      <ProjectSection
-
-        projects={selectedCareer.roadmap?.projects || []}
-
-      />
-
-      <ResourceSection
-
-        resources={selectedCareer.roadmap?.resources || []}
-
-      />
-
-      <InterviewSection
-        topics={selectedCareer.roadmap?.interviewTopics || []}
-      />
-
-      <TimelineSection
-
-        timeline={selectedCareer.roadmap?.timeline || []}
-
-      />
-
+        <OverviewCard career={selectedCareer} />
+      
+        <PrerequisiteSection
+          prerequisites={selectedCareer.roadmap?.prerequisites || []}
+        />
+      
+        <SkillSection
+          skills={selectedCareer.roadmap?.skills || []}
+        />
+      
+        <ProjectSection
+          projects={selectedCareer.roadmap?.projects || []}
+        />
+      
+        <ResourceSection
+          resources={selectedCareer.roadmap?.resources || []}
+        />
+      
+        <InterviewSection
+          topics={selectedCareer.roadmap?.interviewTopics || []}
+        />
+      
+        <TimelineSection
+          timeline={selectedCareer.roadmap?.timeline || []}
+        />
+      
+      </div>
     </div>
 
   );

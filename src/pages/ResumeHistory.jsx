@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./ResumeHistory.css";
+import { API_BASE } from "../config";
 
 function ResumeHistory() {
 
@@ -11,7 +12,7 @@ function ResumeHistory() {
     
             const response = await fetch(
     
-                "http://127.0.0.1:5000/api/resumes"
+                `${API_BASE}/api/resumes`
     
             );
     
@@ -37,11 +38,12 @@ function ResumeHistory() {
 
     return (
 
-        <div className="resume-history">
-    
+        <div className="resume-history-page">
             <h1>Resume History</h1>
+
+            <div className="history-card">
     
-            <table>
+            <table className="history-table">
     
                 <thead>
     
@@ -106,6 +108,8 @@ function ResumeHistory() {
                 </tbody>
     
             </table>
+
+            </div>
     
         </div>
     
