@@ -93,7 +93,7 @@ function Interview() {
       setFeedbackLoading(true);
   
       const response = await fetch(
-        'http://127.0.0.1:5000/api/interview-feedback',
+        'https://careerpilot-backend-tho4.onrender.com/api/interview-feedback',
         {
           method: 'POST',
           headers: {
