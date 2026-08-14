@@ -10,7 +10,7 @@ import ProjectSection from "../components/roadmap/ProjectSection";
 import ResourceSection from "../components/roadmap/ResourceSection";
 import TimelineSection from "../components/roadmap/TimelineSection";
 import InterviewSection from "../components/roadmap/InterviewSection";
-import PrerequisiteSection from "../components/roadmap/PrerequisiteSection";
+import PrerequisiteSection from "../components/roadmap/prerequisiteSection";
 
 function Roadmap() {
 
