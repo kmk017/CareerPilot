@@ -10,21 +10,28 @@ function ResumeHistory() {
 
         try {
     
+            const token = localStorage.getItem("token");
+    
             const response = await fetch(
-    
-                `${API_BASE}/api/resumes`
-    
+                `${API_BASE}/api/resumes`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                }
             );
+    
+            if (!response.ok) {
+                throw new Error("Failed to load resume history");
+            }
     
             const data = await response.json();
     
             setResumes(data);
     
-        }
+        } catch (error) {
     
-        catch (error) {
-    
-            console.error(error);
+            console.error("Resume history error:", error);
     
         }
     

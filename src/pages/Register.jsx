@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE = "https://careerpilot-backend-tho4.onrender.com";
+import { API_BASE } from "../config";
 
 function Register() {
   const navigate = useNavigate();
